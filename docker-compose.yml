@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+
+  nginx:
+    container_name: onewizard-webcopy.ru.nginx
+    image: onewizard-webcopy.ru/nginx:latest
+    build:
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8001:80"
+    volumes:
+      - ./public:/srv/www
+    expose:
+      - 80
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+      
