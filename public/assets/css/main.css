@@ -945,13 +945,14 @@ section,
 }
 
 .learn-more-btn {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: var(--heading-color);
   font-weight: 500;
   transition: all 0.3s ease;
+  padding: 50px 0 0 45%;  
 }
 
 .learn-more-btn:hover {
