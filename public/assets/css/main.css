@@ -147,7 +147,6 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
-  transition: all 0.5s;
   z-index: 997;
 }
 
@@ -168,8 +167,14 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 64px;
   margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .header .logo img {
+    max-height: 42px;
+  }
 }
 
 .header .logo h1 {
@@ -467,6 +472,8 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  margin-right: 150px;
+  padding-bottom: 2rem;
 }
 
 .footer .footer-top {
@@ -935,6 +942,31 @@ section,
   font-size: 0.875rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
+}
+
+.learn-more-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.learn-more-btn .arrow {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.learn-more-btn:hover .arrow {
+  transform: translateY(5px);
 }
 
 @media (max-width: 575px) {
@@ -1700,15 +1732,6 @@ section,
   transition: all 0.3s ease;
 }
 
-.services .service-card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-}
-
-.services .service-card:hover .icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
 .services .service-card:hover .read-more {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
@@ -2327,4 +2350,263 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*модалка*/
+
+.custom-modal {
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.modal-header-custom {
+  background: var(--surface-color);
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+.btn-close-custom {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  border: none;
+  color: var(--default-color);
+  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.btn-close-custom:hover {
+  background: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.modal-description {
+  padding: 1.5rem 2rem 0;
+  text-align: center;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+.modal-subtitle-small {
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 0;
+}
+
+.modal-form {
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface-color);
+}
+
+.form-control-custom:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 8px;
+  background: var(--surface-color);
+  position: relative;
+}
+
+.phone-prefix {
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--default-color), transparent 95%);
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.phone-prefix .arrow {
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.phone-input {
+  border: none;
+  flex: 1;
+  padding: 0.75rem 1rem;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.country-dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border-radius: 0 0 8px 8px;
+  background: var(--surface-color);
+  z-index: 1000;
+}
+
+.country-dropdown.hidden {
+  display: none;
+}
+
+.country-search {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.country-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.country-list li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.country-list li:hover {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.textarea-custom {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-footer {
+  text-align: center;
+}
+
+.btn-submit-custom {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.btn-submit-custom:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-2px);
+}
+
+.contact .contact-form .privacy-text {
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.privacy-text {
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.privacy-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.privacy-link:hover {
+  text-decoration: underline;
+}
+
+.form-messages {
+  text-align: center;
+}
+
+.loading, .error-message, .sent-message {
+  display: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.loading {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+}
+
+.error-message {
+  background: color-mix(in srgb, #dc3545, transparent 90%);
+  color: #dc3545;
+}
+
+.sent-message {
+  background: color-mix(in srgb, #28a745, transparent 90%);
+  color: #28a745;
+}
+
+.modal-dialog.modal-lg {
+  max-width: 560px;
 }
