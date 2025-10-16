@@ -4,11 +4,30 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>One Wizard: WebCopy - Программа для автоматического копирования сайтов</title>
-  <meta name="description" content="WebCopy - профессиональная программа для быстрого и точного копирования веб-сайтов. Автоматизируйте процесс создания копий сайтов для анализа, тестирования и резервного копирования.">
   
+  <title>One Wizard: WebCopy - Программа для автоматического копирования сайтов</title>
+  <meta name="keywords" content="веб студия, digital агентство полного цикла москва, разработка сайтов, автоматизация бизнес процессов, создать сайт под ключ.">
+  <meta property="og:url" content="https://onewizard.ru">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+
+    ym(103421486, 'init', {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/103421486" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- Favicons -->
-  <link href="./assets/img/favicon.png" rel="icon">
+  <link href="./assets/img/favicon.jpg" rel="icon">
+  <link href="./assets/img/favicon.jpg" rel="apple-touch-icon">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -27,6 +46,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  
+
 </head>
 
 <body class="index-page">
@@ -36,8 +57,10 @@
       class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="./assets/img/logo.png" alt="One Wizard: WebCopy">
-        
+        <picture>
+          <source srcset="assets/img/logo-mobile.png" media="(max-width: 767px)">
+          <img src="assets/img/noroot.png" alt="One Wizard Studio">
+        </picture>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -49,7 +72,8 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#contact">Оставить заявку</a>
+      <!-- Кнопка заявки с модальным окном -->
+      <a class="btn-getstarted" href="#" data-bs-toggle="modal" data-bs-target="#applicationModal">Заявка</a>
 
     </div>
   </header>
@@ -73,9 +97,7 @@
               </p>
               <div class="hero-buttons d-flex">
                 <a href="#download" class="btn btn-primary me-3">Скачать бесплатно</a>
-                <a href="#description" class="btn btn-link">Узнать больше <i class="bi bi-arrow-down"></i></a>
               </div>
-              
             </div>
           </div>
 
@@ -90,7 +112,12 @@
       </div>
 
     </section>
-
+    <div>
+        <a href="#description" class="learn-more-btn">
+            <span>Узнать больше</span>
+            <i class="bi bi-arrow-down arrow"></i>
+        </a>
+    </div>
     <section id="description" class="about section light-background">
 
       <div class="container" data-aos="fade-up">
@@ -244,9 +271,8 @@
       </div>
 
     </section>
+    
     <section id="contact" class="contact section light-background">
-
-
       <div class="container section-title" data-aos="fade-up">
         <h2>Контакты</h2>
         <p>Свяжитесь с нами для получения дополнительной информации</p>
@@ -262,7 +288,18 @@
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
-                  <i class="bi bi-headset"></i>
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Местоположение</h4>
+                  <p>г. Москва</p>
+                  <p>127287, ул. 2-я Хуторская, д. 38А, стр. 26</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
                   <h4>Телефон</h4>
@@ -270,25 +307,13 @@
                 </div>
               </div>
 
-              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
                   <h4>Электронная почта</h4>
                   <p>one-wizard@mail.ru</p>
-                  <p>Ответ в течение 2 часов</p>
-                </div>
-              </div>
-
-              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-clock"></i>
-                </div>
-                <div class="content">
-                  <h4>Местоположение</h4>
-                  <p>г. Москва</p>
-                  <p>127287, ул. 2-я Хуторская, д. 38А, стр. 26</p>
                 </div>
               </div>
             </div>
@@ -311,9 +336,7 @@
                     <input type="email" class="form-control" name="email" placeholder="Ваш email" required="">
                   </div>
 
-                  <div class="col-12">
-                    <input type="tel" class="form-control" name="phone" placeholder="Ваш телефон">
-                  </div>
+                  <!-- Убрано поле телефона -->
 
                   <div class="col-12">
                     <textarea class="form-control" name="message" rows="5" placeholder="Ваше сообщение или вопрос"
@@ -343,54 +366,112 @@
   </main>
 
   <footer id="footer" class="footer">
-
-  <div class="container footer-top">
-    <div class="row gy-4">
-      <div class="col-lg-6 col-md-6 footer-about">
-        <a href="index.html" class="logo d-flex align-items-center">
-          <span class="sitename">One Wizard Studio</span>
-        </a>
-        <div class="footer-contact pt-3">
-          <p><strong>Местоположение:</strong> г. Москва</p>
-          <p>127287, ул. 2-я Хуторская, д. 38А, стр. 26</p>
-          <p class="mt-3"><strong>Телефон:</strong> 
-            <a href="tel:+79953015792" class="footer-contact-link">8(995)301-57-92</a>
-          </p>
-          <p><strong>Почта:</strong> 
-              <a href="mailto:one-wizard@mail.ru" class="footer-contact-link">one-wizard@mail.ru</a>
-          </p>
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">One Wizard Studio</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Местоположение:</strong> г. Москва</p>
+            <p>127287, ул. 2-я Хуторская, д. 38А, стр. 26</p>
+            <p class="mt-3"><strong>Телефон:</strong> 
+              <a href="tel:+79953015792" class="footer-contact-link">8(995)301-57-92</a>
+            </p>
+            <p><strong>Почта:</strong> 
+                <a href="mailto:one-wizard@mail.ru" class="footer-contact-link">one-wizard@mail.ru</a>
+            </p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="@one_wizard_studio"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z" fill="currentColor"></path></svg></a>
+            <a href="https://wa.me/79953015792"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z" fill="currentColor"></path> </svg></a>
+            <a href="https://vk.com/one.wizard"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm-5.08-76.414a48.135 48.135 0 0 0 2.187-.422c.324-.08 1.735-.153 3.134-.163 2.047-.013 3.002.067 4.89.41 7.843 1.428 13.918 5.42 18.472 12.135 1.99 2.934 3.603 7.076 4.066 10.44.313 2.276.265 7.758-.084 9.632-.373 2.006-1.503 5.362-2.424 7.2-2.132 4.25-5.556 8.135-9.378 10.638-1.183.774-3.108 1.843-3.838 2.13-.324.127-.669.291-.766.364-.387.29-3.382 1.191-5.337 1.604-1.807.382-2.488.44-5.279.445-2.862.007-3.437-.042-5.395-.455-3.863-.814-7.02-2.082-9.589-3.85-.587-.404-1.059-.363-4.407.381-3.654.812-4.57.94-4.88.682-.382-.316-.335-.8.4-4.153.749-3.409.938-4.215.702-4.867-.082-.227-.216-.436-.397-.731-2.693-4.394-3.984-9.062-3.997-14.46-.012-4.75.867-8.55 2.898-12.526.727-1.424 2.002-3.481 2.66-4.293.753-.927 4.735-4.855 5.312-5.24 2.412-1.604 2.967-1.933 4.722-2.79 1.91-.934 4.466-1.787 6.329-2.11Zm-4.47 22.33c-.949-2.514-1.303-3.314-1.605-3.615-.316-.317-.585-.352-3.088-.4-2.973-.058-3.103-.022-3.396.94-.119.39.636 3.353.932 3.657a.624.624 0 0 1 .156.375c0 .21.655 1.726 1.42 3.283.396.807 2.79 4.884 2.955 5.034.051.047.547.692 1.102 1.433 1.524 2.037 3.773 4.03 5.762 5.105 1.877 1.015 4.904 1.58 7.043 1.312 1.52-.19 1.615-.358 1.615-2.881 0-3.283.375-3.786 2.166-2.903.73.36 3.253 2.726 4.916 4.61.417.473.924.947 1.127 1.054.385.204 5.693.285 6.19.094.496-.19.516-1.17.043-2.138-.546-1.117-2.396-3.43-4.437-5.55-1.08-1.121-1.575-1.76-1.575-2.033 0-.34.841-1.897 1.161-2.15.107-.084.956-1.339 1.282-1.893.094-.16.636-1.07 1.204-2.023 1.464-2.455 1.755-3.08 1.864-4.002.088-.74.057-.84-.335-1.097-.367-.24-.822-.275-3.044-.228-2.49.051-2.631.073-3.043.46-.237.223-.479.565-.536.758-.168.565-1.947 4.025-2.2 4.278-.127.127-.23.305-.23.397 0 .281-1.514 2.377-2.339 3.24-.903.943-1.416 1.2-1.888.947-.31-.165-.326-.399-.329-4.679-.002-3.293-.06-4.617-.216-4.926l-.213-.421H45.35l-.25.447c-.24.425-.219.501.414 1.518l.666 1.07v4.3c0 4.29 0 4.3-.367 4.352-.5.07-1.505-.864-2.465-2.296-.797-1.188-2.506-4.389-2.898-5.429Z" fill="currentColor"></path> </svg></a>
+          </div>
         </div>
-        <div class="social-links d-flex mt-4">
-          <a href="@one_wizard_studio"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z" fill="currentColor"></path></svg></a>
-          <a href="https://wa.me/79953015792"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z" fill="currentColor"></path> </svg></a>
-          <a href="https://vk.com/one.wizard"><svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm-5.08-76.414a48.135 48.135 0 0 0 2.187-.422c.324-.08 1.735-.153 3.134-.163 2.047-.013 3.002.067 4.89.41 7.843 1.428 13.918 5.42 18.472 12.135 1.99 2.934 3.603 7.076 4.066 10.44.313 2.276.265 7.758-.084 9.632-.373 2.006-1.503 5.362-2.424 7.2-2.132 4.25-5.556 8.135-9.378 10.638-1.183.774-3.108 1.843-3.838 2.13-.324.127-.669.291-.766.364-.387.29-3.382 1.191-5.337 1.604-1.807.382-2.488.44-5.279.445-2.862.007-3.437-.042-5.395-.455-3.863-.814-7.02-2.082-9.589-3.85-.587-.404-1.059-.363-4.407.381-3.654.812-4.57.94-4.88.682-.382-.316-.335-.8.4-4.153.749-3.409.938-4.215.702-4.867-.082-.227-.216-.436-.397-.731-2.693-4.394-3.984-9.062-3.997-14.46-.012-4.75.867-8.55 2.898-12.526.727-1.424 2.002-3.481 2.66-4.293.753-.927 4.735-4.855 5.312-5.24 2.412-1.604 2.967-1.933 4.722-2.79 1.91-.934 4.466-1.787 6.329-2.11Zm-4.47 22.33c-.949-2.514-1.303-3.314-1.605-3.615-.316-.317-.585-.352-3.088-.4-2.973-.058-3.103-.022-3.396.94-.119.39.636 3.353.932 3.657a.624.624 0 0 1 .156.375c0 .21.655 1.726 1.42 3.283.396.807 2.79 4.884 2.955 5.034.051.047.547.692 1.102 1.433 1.524 2.037 3.773 4.03 5.762 5.105 1.877 1.015 4.904 1.58 7.043 1.312 1.52-.19 1.615-.358 1.615-2.881 0-3.283.375-3.786 2.166-2.903.73.36 3.253 2.726 4.916 4.61.417.473.924.947 1.127 1.054.385.204 5.693.285 6.19.094.496-.19.516-1.17.043-2.138-.546-1.117-2.396-3.43-4.437-5.55-1.08-1.121-1.575-1.76-1.575-2.033 0-.34.841-1.897 1.161-2.15.107-.084.956-1.339 1.282-1.893.094-.16.636-1.07 1.204-2.023 1.464-2.455 1.755-3.08 1.864-4.002.088-.74.057-.84-.335-1.097-.367-.24-.822-.275-3.044-.228-2.49.051-2.631.073-3.043.46-.237.223-.479.565-.536.758-.168.565-1.947 4.025-2.2 4.278-.127.127-.23.305-.23.397 0 .281-1.514 2.377-2.339 3.24-.903.943-1.416 1.2-1.888.947-.31-.165-.326-.399-.329-4.679-.002-3.293-.06-4.617-.216-4.926l-.213-.421H45.35l-.25.447c-.24.425-.219.501.414 1.518l.666 1.07v4.3c0 4.29 0 4.3-.367 4.352-.5.07-1.505-.864-2.465-2.296-.797-1.188-2.506-4.389-2.898-5.429Z" fill="currentColor"></path> </svg></a>
-            
-          </i></a>
-        </div>
-      </div>
 
-      <div class="col-lg-6 col-md-6">
-        <div class="footer-newsletter">
-          <h4>Подпишитесь на новости, чтобы узнавать об обновлениях первыми</h4>
-          <form class="newsletter-form mt-3">
-            <div class="row">
-              <div class="col-md-8">
-                <input type="email" class="form-control" placeholder="Ваш email" required>
+        <div class="col-lg-6 col-md-6">
+          <div class="footer-newsletter">
+            <h4>Подпишитесь на новости, чтобы узнавать об обновлениях первыми</h4>
+            <form class="newsletter-form mt-3">
+              <div class="row">
+                <div class="col-md-8">
+                  <input type="email" class="form-control" placeholder="Ваш email" required>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary w-100">Подписаться</button>
+                </div>
               </div>
-              <div class="col-md-4">
-                <button type="submit" class="btn btn-primary w-100">Подписаться</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Модальное окно для заявки -->
+  <div class="modal fade" id="applicationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal">
+        <div class="modal-body p-0">
+          <div class="modal-header-custom">
+            <div class="logo-container">
+              <img src="assets/img/noroot.png" alt="One Wizard Studio" class="modal-logo">
+            </div>
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+
+          <div class="modal-description text-center">
+            <p class="modal-subtitle">Чтобы начать новый проект, заполните форму</p>
+            <p class="modal-subtitle-small">или свяжитесь с нами любым удобным способом</p>
+          </div>
+
+          <form class="modal-form php-email-form">
+            <div class="form-group">
+              <label class="form-label">Ваше имя</label>
+              <input type="text" name="name" class="form-control-custom" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Телефон</label>
+              <div class="phone-input-wrapper">
+                <div class="phone-prefix" id="customCountrySelect">
+                  <span id="selectedCountry">🌍</span>
+                  <span class="arrow">▼</span>
+                </div>
+                <input type="tel" id="phoneInput" class="phone-input" placeholder="Введите номер телефона">
+                <div id="countryDropdown" class="country-dropdown hidden">
+                  <input type="text" id="countrySearch" placeholder="Поиск страны..." class="country-search">
+                  <ul id="countryList" class="country-list"></ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Расскажите вкратце о проекте</label>
+              <textarea class="form-control-custom textarea-custom" name="message" rows="3"></textarea>
+            </div>
+            
+            <div class="form-footer">
+              <button type="submit" class="btn-submit-custom w-100">
+                <span>Отправить</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+              <p class="privacy-text">
+                Отправляя заявку, вы соглашаетесь с нашей <a href="/term-of-use" class="privacy-link">Политикой обработки персональных данных</a>
+              </p>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
